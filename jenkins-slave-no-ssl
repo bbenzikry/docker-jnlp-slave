@@ -1,12 +1,15 @@
-#!/bin/bash
-if [[ $# -eq 1 ]]; then
+# #!/bin/bash
+# if [[ $# -eq 1 ]]; then
+#
+# 	# if `docker run` only has one arguments, we assume user is running alternate command like `bash` to inspect the image
+#   exec "$@"
+#
+# else
+# POSITIONAL=$@
+# POSITIONAL=${POSITIONAL//url/jnlpUrl}
+# NOSSL="-noCertificateCheck"
+# echo "exec java $JAVA_OPTS -jar /usr/share/jenkins/slave.jar $POSITIONAL"
+# fi
 
-	# if `docker run` only has one arguments, we assume user is running alternate command like `bash` to inspect the image
-  exec "$@"
 
-else
-POSITIONAL=$@
-POSITIONAL=${POSITIONAL//url/jnlpUrl}
-NOSSL="-noCertificateCheck"
-echo "exec java $JAVA_OPTS -jar /usr/share/jenkins/slave.jar $POSITIONAL"
-fi
+# RESORT TO USING jenkins-slave, with slight modification for environment variable assignemnt. 
