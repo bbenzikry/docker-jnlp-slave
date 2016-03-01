@@ -8,5 +8,5 @@ else
 POSITIONAL=$@
 POSITIONAL=${POSITIONAL//url/jnlpUrl}
 NOSSL="-noCertificateCheck"
-echo "exec java $JAVA_OPTS -jar /usr/share/jenkins/slave.jar -headless $NOSSL $POSITIONAL"
+echo "exec java $JAVA_OPTS -jar /usr/share/jenkins/slave.jar $POSITIONAL"
 fi
