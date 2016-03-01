@@ -30,7 +30,7 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci
   && chmod 755 /usr/share/jenkins \
   && chmod 644 /usr/share/jenkins/slave.jar
 
-COPY jenkins-slave /usr/local/bin/jenkins-slave
+COPY jenkins-slave-no-ssl /usr/local/bin/jenkins-slave
 
 VOLUME /home/jenkins
 WORKDIR /home/jenkins
